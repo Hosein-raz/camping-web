@@ -2,14 +2,14 @@
     /* Colors */
     --white: #FFF;
     --primary-color: #E76F51;
-    --secondary-color: #F8E1DB;
+    --secondary-color: #FAF4F2;
     --text-color: #3B3735;
     --gray: #8D8D8D;
 
     /* Fonts */
-    --primary-font: "Roboto";
-    --secondary-font: "Roboto Medium";
-    --title-font: "Archivo";
+    --primary-font: "Roboto", sans-serif, Arial;
+    --secondary-font: "Roboto Medium", sans-serif, Arial;
+    --title-font: "Archivo", sans-serif, Arial;
     --eighteen: 1.8rem;
 
     /* Transition */
@@ -32,6 +32,7 @@ body {
     line-height: 1.6;
     font-size: 1.6rem;
     font-family: var(--primary-font);
+    background-color: var(--secondary-color);
 }
 
 /*
@@ -61,16 +62,14 @@ a {
 
 /*
 
- -- App Styles
+ -- App Styles --
 
 */
 
 
 /*
 
- ==================
-       Header
- ==================
+ -- Header --
 
 */
 
@@ -79,7 +78,7 @@ a {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 85vh;
+    height: 90vh;
     padding-top: 2.5rem;
     border-bottom-right-radius: 8rem;
     border-bottom-left-radius: 8rem;
@@ -379,4 +378,62 @@ a {
 
 .header-content__link {
     background-color: var(--primary-color);
+}
+
+/*
+
+ -- Main --
+
+*/
+
+.main {
+    padding: 4rem 0;
+}
+
+/*
+
+ ==================
+       Services
+ ==================
+
+*/
+
+.services {
+    margin-top: -15rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -1rem;
+    margin-left: -1rem;
+}
+
+.service {
+    background-color: var(--white);
+    border-radius: 3rem;
+    text-align: center;
+    padding: 2rem;
+    height: 27rem;
+    width: 29rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    flex-grow: 1;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.service__icon {
+    display: block;
+}
+
+.service__title {
+    font-family: var(--title-font);
+    font-size: var(--eighteen);
+    margin: 2rem 0 1rem;
+}
+
+.service__caption {
+
 }
