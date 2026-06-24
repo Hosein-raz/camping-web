@@ -53,7 +53,7 @@ a {
 
 .btn {
     background-color: var(--gray);
-    padding: 1rem 7rem;
+    padding: 1.3rem 5rem;
     color: var(--white);
     border-radius: 3rem;
     font-family: var(--secondary-font);
@@ -393,7 +393,7 @@ a {
 /*
 
  ==================
-       Services
+      Services
  ==================
 
 */
@@ -436,4 +436,137 @@ a {
 
 .service__caption {
 
+}
+
+/*
+
+ ==================
+    Destinations
+ ==================
+
+*/
+
+.destinations {
+    margin-top: 10rem;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.destinations__icon {
+    display: block;
+    margin: 0 auto;
+    width: 8rem;
+    height: 8rem;
+}
+
+.destinations__title {
+    font-family: var(--title-font);
+    font-size: 2.4rem;
+    margin: 2rem auto;
+    max-width: 29rem;
+}
+
+.destinations__places {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    margin-right: -1rem;
+    margin-left: -1rem;
+}
+
+.place {
+    background-color: var(--white);
+    border-radius: 3rem;
+    height: auto;
+    width: 29rem;
+    padding: 3.5rem 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    overflow: hidden;
+}
+
+.place__banner {
+    width: 100%;
+    height: 15rem;
+    position: relative;
+    margin-bottom: 3.5rem;
+}
+
+.place__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+.place__like {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background-color: var(--white);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1.3rem;
+    cursor: pointer;
+}
+
+.place__like-icon {
+    margin: 0.5rem auto;
+}
+
+.place__like-icon--fill {
+    fill: var(--primary-color);
+}
+
+.place__price {
+    position: absolute;
+    bottom: -2rem;
+    left: 0;
+    right: 0;
+    max-width: 13rem;
+    margin: 0 auto;
+    background-color: var(--white);
+    color: var(--primary-color);
+    font-family: var(--secondary-font);
+    padding: 1rem 0;
+    border-radius: 2rem;
+}
+
+.place__title {
+    font-family: var(--title-font);
+    font-size: var(--eighteen);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.place__caption {
+    margin: 0.7rem 0 3rem;
+}
+
+.place__link {
+    background-color: rgba(141,141,141,0.1);
+    color: var(--gray);
+    transition: var(--primary-transition);
+}
+
+.place__link:hover {
+    background-color: rgba(231,111,81,0.1);
+    color: var(--primary-color);
+}
+
+.destinations__btn {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    transition: var(--primary-transition);
+}
+
+.destinations__btn:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
