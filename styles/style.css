@@ -21,6 +21,7 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;
     /* 10px */
+    scroll-behavior: smooth;
 }
 
 *,
@@ -79,7 +80,7 @@ a {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 90vh;
+    height: 85vh;
     padding-top: 2.5rem;
     border-bottom-right-radius: 8rem;
     border-bottom-left-radius: 8rem;
@@ -666,7 +667,12 @@ a {
 */
 
 .footer {
-
+    background-color: var(--secondary-color);
+    border-top-left-radius: 8rem;
+    border-top-right-radius: 8rem;
+    position: relative;
+    padding: 8rem 0 3rem;
+    color: var(--text-color);
 }
 
 /*
@@ -677,32 +683,57 @@ a {
 
 */
 
-.footer__wrapper {
+.footer__top {
+    position: absolute;
+    top: -2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--white);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.footer__top-img {
+    display: block;
+}
+
+
+.footer__wrapper {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .footer__about {
-
+    margin-bottom: 3rem;
 }
 
-.footer__about-title {
+.footer__about-title, .footer__list-title, .download__app-title {
+    font-family: var(--title-font);
+    margin-bottom: 1rem;
+    font-size: var(--eighteen);
 
 }
 
 .footer__about-caption {
-
+    
 }
 
 .footer__lists {
-
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -1rem;
+    margin-left: -1rem;
 }
 
 .footer__list-section {
-
-}
-
-.footer__list-title {
-
+    margin-bottom: 3rem;
+    flex-grow: 1;
+    margin-right: 1rem;
+    margin-left: 1rem;
 }
 
 .footer__list {
@@ -710,29 +741,38 @@ a {
 }
 
 .footer__list-item {
-
-}
+    padding-bottom: 0.5rem;
+}  
 
 .footer__list-link {
+    color: var(--text-color);
+    transition: var(--primary-transition);
+}
 
+.footer__list-link:hover {
+    color: var(--primary-color);
 }
 
 .download__app {
 
 }
 
-.download__app-title {
-
+.download__app-wrapper {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .download__app-link {
-
+    display: block;
+    margin-bottom: 1rem;
+    margin-right: 1.5rem;
 }
 
 .download__app-img {
-
+    display: block;
 }
 
 .footer__copyright {
-
+    text-align: center;
+    margin-top: 4rem;
 }
