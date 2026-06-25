@@ -35,6 +35,7 @@ body {
     font-size: 1.6rem;
     font-family: var(--primary-font);
     background-color: var(--bg-color);
+    overflow-x: hidden;
 }
 
 /*
@@ -80,7 +81,7 @@ a {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 85vh;
+    height: 65rem;
     padding-top: 2.5rem;
     border-bottom-right-radius: 8rem;
     border-bottom-left-radius: 8rem;
@@ -187,6 +188,7 @@ a {
     width: 25rem;
     padding: 2rem;
     transition: var(--primary-transition);
+    z-index: 100;
 }
 
 .nav-menu--open {
@@ -412,7 +414,7 @@ a {
     background-color: var(--white);
     border-radius: 3rem;
     text-align: center;
-    padding: 2rem;
+    padding: 2rem 1rem;
     height: 27rem;
     width: 29rem;
     display: flex;
@@ -428,6 +430,8 @@ a {
 
 .service__icon {
     display: block;
+    width: 8rem;
+    height: 8rem;
 }
 
 .service__title {
@@ -452,6 +456,29 @@ a {
     margin-top: 10rem;
     text-align: center;
     color: var(--text-color);
+    position: relative;
+}
+
+.destinations::before, .destinations::after {
+    content: '';
+    position: absolute;
+    width: 100rem;
+    height: 100rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.destinations::before {
+    background-image: url(/images/svg/shape-1.svg);
+    right: -61rem;
+    top: -43rem;
+}
+
+.destinations::after {
+    background-image: url(/images/svg/shape-2.svg);
+    left: -75rem;
+    bottom: 28rem;
 }
 
 .destinations__icon {
@@ -589,12 +616,30 @@ a {
     padding: 2rem;
     flex-direction: column-reverse;
     box-shadow: 0 0 15px rgba(59,55,53,0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.newsletter::before {
+    content: '';
+    background: url(/images/svg/shape-3.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 15rem;
+    right: 0;
+    left: -15rem;
+    bottom: 0;
+    width: 50rem;
+    height: 50rem;
+    background-size: contain;
+    z-index: 0;
 }
 
 .newsletter__content {
     color: var(--text-color);
     margin: 3rem 0;
     text-align: center;
+    z-index: 1;
 }
 
 .newsletter__title {
@@ -626,6 +671,10 @@ a {
     width: 100%;
 }
 
+.newsletter__form--icon {
+    margin-right: 0.5rem;
+}
+
 .newsletter__e-address {
     width: 100%;
     height: 5rem;
@@ -650,7 +699,7 @@ a {
 }
 
 .newsletter__banner {
-    
+    z-index: 1;
 }
 
 .newsletter__img {
@@ -687,7 +736,6 @@ a {
     position: absolute;
     top: -2.5rem;
     left: 50%;
-    transform: translateX(-50%);
     background-color: var(--white);
     width: 5rem;
     height: 5rem;
@@ -695,6 +743,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 0 0.8rem rgba(59,55,53,0.05);
 }
 
 .footer__top-img {

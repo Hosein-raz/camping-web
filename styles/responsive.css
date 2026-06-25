@@ -30,6 +30,15 @@
         flex-basis: 45%;
     }
 
+    .newsletter::before {
+        width: auto;
+        height: auto;
+        top: 0;
+        left: -45rem;
+        background-size: auto;
+        background-position: center left;
+    }
+
   }
 
   @media (min-width: 992px) {
@@ -49,6 +58,9 @@
         max-width: 46rem;
     }
 
+    .newsletter::before {
+        left: -35rem;
+    }
     
   }
 
@@ -81,8 +93,23 @@
         margin-left: 3rem;
         margin-bottom: 0rem;
     }
+
+    .newsletter::before {
+        left: -20rem;
+    }
+
+    .header {
+        min-height: 80rem;
+    }
+
+    .footer__top {
+        left: auto;
+        right: 18rem;
+    }
   }
 
   @media (min-width: 1400px) {
-    
+    .footer__top {
+        right: 30rem;
+    }
   }
